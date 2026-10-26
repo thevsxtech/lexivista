@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LexiVista 词境 — 在场景中学英文 · An OpenWord app</title>
+<meta name="description" content="LexiVista (词境), an OpenWord app: import your own words and articles with Chinese translation and read-aloud, generate vocabulary for any real-life scene, and study over beautiful scenic backgrounds.">
+<link rel="icon" href="icon.png">
+<link rel="apple-touch-icon" href="icon.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Segoe UI", Roboto, sans-serif;
+    color: #1c1c1e;
+    background: #fafafa;
+    line-height: 1.6;
+  }
+  .hero {
+    background: linear-gradient(135deg, #E67E4F 0%, #D85A3C 100%);
+    color: #fff;
+    padding: 72px 24px 96px;
+    text-align: center;
+  }
+  .family {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,0.18);
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 24px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .family:hover { background: rgba(255,255,255,0.28); }
+  .logo {
+    width: 104px;
+    height: 104px;
+    border-radius: 24px;
+    display: block;
+    margin: 0 auto 24px;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  }
+  h1 { font-size: 44px; font-weight: 800; margin-bottom: 4px; letter-spacing: -0.5px; }
+  h1 small { display: block; font-size: 22px; font-weight: 600; opacity: 0.92; letter-spacing: 0; }
+  .tagline { font-size: 18px; opacity: 0.95; max-width: 560px; margin: 16px auto 4px; }
+  .tagline.en { font-size: 15px; opacity: 0.85; margin: 0 auto 36px; }
+  .badge {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.15s;
+  }
+  .badge:hover { transform: scale(1.03); }
+  main { max-width: 720px; margin: 0 auto; padding: 64px 24px; }
+  h2 { font-size: 28px; font-weight: 700; margin-bottom: 20px; color: #1c1c1e; }
+  h2 .en { display: block; font-size: 16px; font-weight: 600; color: #8e8e93; }
+  .features { display: grid; gap: 20px; margin-bottom: 48px; }
+  .feature { background: #fff; padding: 24px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .feature h3 { font-size: 17px; font-weight: 600; margin-bottom: 6px; }
+  .feature h3 .en { color: #8e8e93; font-weight: 500; font-size: 15px; margin-left: 4px; }
+  .feature p { color: #3c3c43; font-size: 15px; }
+  .feature p.en { color: #6c6c70; font-size: 14px; margin-top: 4px; }
+  .plans { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 48px; }
+  .plan { background: #fff; padding: 22px; border-radius: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.04); }
+  .plan.pro { border: 2px solid #D85A3C; }
+  .plan h3 { font-size: 18px; margin-bottom: 10px; }
+  .plan ul { list-style: none; color: #3c3c43; font-size: 14px; }
+  .plan li { padding: 4px 0; }
+  .parent {
+    background: #fff;
+    border-left: 4px solid #D85A3C;
+    padding: 20px 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    color: #3c3c43;
+    font-size: 15px;
+  }
+  .parent .en { color: #6c6c70; font-size: 14px; margin-top: 6px; }
+  .parent a { color: #D85A3C; text-decoration: none; font-weight: 600; }
+  .parent a:hover { text-decoration: underline; }
+  footer {
+    text-align: center;
+    padding: 32px 24px 48px;
+    color: #8e8e93;
+    font-size: 14px;
+    border-top: 1px solid #e5e5e7;
+  }
+  footer a { color: #D85A3C; text-decoration: none; margin: 0 12px; }
+  footer a:hover { text-decoration: underline; }
+  @media (max-width: 600px) {
+    h1 { font-size: 36px; }
+    .hero { padding: 56px 20px 76px; }
+    .plans { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <a class="family" href="../index.html">An OpenWord app · OpenWord 旗下应用</a>
+  <img class="logo" src="icon.png" alt="LexiVista 词境 app icon">
+  <h1>词境<small>LexiVista</small></h1>
+  <p class="tagline">在属于你的场景里，学你真正需要的英文。</p>
+  <p class="tagline en">Learn the English your life actually needs — in your own scenes.</p>
+  <a class="badge" href="#" id="appstore-link">即将上架 App Store · Coming soon</a>
+</section>
+
+<main>
+  <h2>为什么选择词境<span class="en">Why LexiVista?</span></h2>
+  <div class="features">
+    <div class="feature">
+      <h3>📥 导入自己的单词与文章<span class="en">Bring your own words</span></h3>
+      <p>粘贴、选择文件或拍照识别，自动查音标、释义和例句，并翻译成中文。文章逐句中英对照。</p>
+      <p class="en">Paste, pick a file or scan a photo. Get phonetics, definitions, examples and Chinese translations; articles are translated sentence by sentence.</p>
+    </div>
+    <div class="feature">
+      <h3>✨ 场景联想<span class="en">Scene vocabulary</span></h3>
+      <p>描述一个生活场景——机场值机、看医生、家长会——自动联想你会用到的单词和常用句。</p>
+      <p class="en">Describe a real-life scene — airport check-in, a doctor's visit, a parent-teacher meeting — and get the words and phrases you'll actually need.</p>
+    </div>
+    <div class="feature">
+      <h3>💬 AI 情景对话<span class="en">AI role-play</span></h3>
+      <p>和 AI 在场景中对话练习，自动穿插场景词汇，并用中文给出语法纠正。</p>
+      <p class="en">Practise a conversation in the scene with AI, using your scene words, with gentle corrections in Chinese.</p>
+    </div>
+    <div class="feature">
+      <h3>🎧 朗读<span class="en">Read-aloud</span></h3>
+      <p>单词优先真人发音，支持美式、英式、澳式口音；单词本和整篇文章可以连续朗读，并可同时读出中文。</p>
+      <p class="en">Human pronunciation for words, US/UK/AU accents, and continuous playback of word lists and whole articles — with optional Chinese.</p>
+    </div>
+    <div class="feature">
+      <h3>🏞️ 动态风景背景<span class="en">Scenic backgrounds</span></h3>
+      <p>12 张精选风景，可固定、每日轮换或随机，也可以用每日在线风景或自己的照片。</p>
+      <p class="en">12 hand-made scenic backgrounds — fixed, daily or random — plus a daily online landscape or your own photo.</p>
+    </div>
+    <div class="feature">
+      <h3>🔁 间隔复习<span class="en">Spaced review</span></h3>
+      <p>闪卡、选择题和听力测验，按记忆曲线安排下一次复习。</p>
+      <p class="en">Flashcards, multiple-choice and listening quizzes, scheduled on a spaced-repetition curve.</p>
+    </div>
+  </div>
+
+  <h2>免费版与 Pro<span class="en">Free &amp; Pro</span></h2>
+  <div class="plans">
+    <div class="plan">
+      <h3>免费版 Free</h3>
+      <ul>
+        <li>5 个单词本，每本 50 个词条</li>
+        <li>3 篇文章，3 个场景</li>
+        <li>每天 5 轮 AI 对话</li>
+        <li>4 张风景背景</li>
+      </ul>
+    </div>
+    <div class="plan pro">
+      <h3>Pro</h3>
+      <ul>
+        <li>单词本、词条、文章、场景不限量</li>
+        <li>AI 对话不限次数</li>
+        <li>全部风景 + 每日在线风景 + 我的照片</li>
+        <li>月度 / 年度订阅，或一次性永久版</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="parent">
+    <p>词境是 <a href="../index.html">OpenWord</a> 旗下的场景学习应用。OpenWord 提供 5,000 个高频词和 3,000+ 日常短语，支持 10 种语言。</p>
+    <p class="en">LexiVista is part of the <a href="../index.html">OpenWord</a> family. OpenWord offers 5,000 high-frequency words and 3,000+ everyday phrases in 10 languages.</p>
+  </div>
+</main>
+
+<footer>
+  <a href="support.html">支持 Support</a> ·
+  <a href="privacy.html">隐私政策 Privacy</a> ·
+  <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">使用条款 Terms</a> ·
+  <a href="mailto:thevsx.tech@gmail.com">联系 Contact</a>
+  <p style="margin-top:16px;">LexiVista · 词境 is an <a href="../index.html" style="margin:0;">OpenWord</a> app. © 2026 OpenWord. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
